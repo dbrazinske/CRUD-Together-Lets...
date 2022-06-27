@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+h1{
+  margin-bottom: 20px;
+}
+
+.together-list-container {
+  position: relative;
+  font-family: 'Dancing Script';
+  background-color: rgba(255, 255, 255, 0.342);
+  border-radius: 3%;
+  min-height: 80vh;
+  width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 3px 10px 4px #0005;
+}
+
+.add-together-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  margin: 0 auto 20px;
+  column-gap: 12px;
+  row-gap: 6px;
+}
+
+.add-together-form__input {
+  flex-grow: 1;
+}
+
+.add-together-form__error {
+  text-align: left;
+  width: 100%;
+}
+
+.add-together-form>input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background: none;
+}
+
+.add-together-form>input:focus {
+  border-bottom: 1px solid #cb98eb;
+  outline: none;
+}
+
+.together-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.together-list__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.together-list__item__text {
+  border-bottom: 1px solid black;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 22px;
+  font-size: 1.2em;
+}
+
+.checkbox {
+  height: 22px;
+  width: 22px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.288);
+}
+
+.checkbox.checked {
+  background-color: #9c9ce47e;
+}
+
+.checkbox.checked::before {
+  display: inline-block;
+  content: '';
+  height: 15px;
+  width: 6px;
+  border: 2px solid black;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+button {
+  display: inline-grid;
+  place-items: center;
+  border: none;
+  background: none;
+  padding: 0 4px;
+}
+.bi-trash{
+  font-size: 1.2em; 
+  color: rgba(255, 255, 255, 0.884);
+  transition: transform .2s;
+}
+.bi-trash:hover{
+  transform: scale(1.2);
+}
+.addBtn{
+  border: 1px solid black;
+  background-color: #9c9ce4ce;
+  width: 80px;
+  border-radius: 50%;
+  transition: transform .2s;
+}
+.addBtn:hover{
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .together-list-container {
+    width: 300px;
+
+  }
+    .add-together-form{
+      width: 250px;
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .add-together-form__error {
+      text-align: center;
+     }
+    .together-list__item__text{
+    overflow-x:auto;
+    }
+}
